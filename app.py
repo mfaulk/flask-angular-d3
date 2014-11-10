@@ -1,9 +1,11 @@
 from flask import Flask
+from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
 print os.environ['APP_SETTINGS']
 app.config.from_object(os.environ['APP_SETTINGS'])
+db = SQLAlchemy(app)
 
 
 @app.route('/')
