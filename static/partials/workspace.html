@@ -1,0 +1,52 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+
+            <li>
+                <a href="#" class="btn btn-lg btn-succes" data-toggle="modal" data-target="#basicModal">Data Sources</a>
+            </li>
+            <li>
+                <a href="#">Transformations</a>
+            </li>
+            <li>
+                <a href="#">Visualizations</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    
+
+
+    <!-- Workspace Content -->
+    <div id="workspace-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <etl-visualization flow="flow"></etl-visualization>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- /#page-content-wrapper -->
+</div>
+
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Create new data source</h4>
+            </div>
+            <form novalidate class="simple-form">
+                Name: <input type="text" ng-model="source.name" /><br />
+            </form>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="createSource(source)">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
