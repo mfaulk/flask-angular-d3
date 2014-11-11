@@ -9,11 +9,11 @@ etlApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/reports', {
-        templateUrl: '../partials/reports.html',
+        templateUrl: '/static/partials/reports.html',
         controller: 'reportsCtrl'
       }).
       otherwise({
-        templateUrl: '../static/partials/workspace.html',
+        templateUrl: '/static/partials/workspace.html',
         controller: 'workspaceCtrl'
       });
   }]);
